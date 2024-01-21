@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function getProducts() {
     try {
       const response = await fetch(
-        "http://makeup-api.herokuapp.com/api/v1/products.json"
+        "https://makeup-api.herokuapp.com/api/v1/products.json"
       );
       if (!data) {
         data = await response.json();
