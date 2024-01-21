@@ -158,7 +158,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isValidPrice(product.price)) {
       const fragment = document.createDocumentFragment();
 
-      let convertedPrice = parseFloat(product.price).toFixed(2);
+      let convertedPrice = parseFloat(product.price * 5.5)
+        .toFixed(2)
+        .replace(".", ",");
 
       const item = createElement("div", {
         classes: ["product"],
@@ -239,9 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { label: "Brand", value: product.brand },
       {
         label: "Price",
-        value: `R$ ${Number(product.price * 5.5)
-          .toFixed(2)
-          .replace(".", ",")}`,
+        value: `R$ ${product.price}`,
       },
       { label: "Rating", value: product.rating },
       { label: "Category", value: product.category },
