@@ -1,4 +1,4 @@
-import { brands, types } from "../data/data.js";
+import { brands, types } from "./data.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const sortTypeSelect = document.getElementById("sort-type");
